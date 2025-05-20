@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome | SDG Dashboard</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="home-bg">
+    <div class="home-container">
+      <header class="home-header">
+        <h1>Welcome to the Sustainable Goals Learning Hub</h1>
+        <p>Empowering students to build a better world through education, awareness, and action.</p>
+      </header>
+  
+      <div class="auth-buttons">
+        <a href="login.html" class="btn primary">🔐 Login</a>
+        <a href="register.html" class="btn secondary">📝 Register</a>
+      </div>
+    </div>
+  
+    <script>
+      if (localStorage.getItem("sdgSession") === "true") {
+        window.location.href = "dashboard.html";
+      }
+    </script>
+  </body>
+</html>
+
+
+
+  

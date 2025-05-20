@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - SDG Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth">
+  <div class="auth-container">
+    <h2><strong>My Profile</strong></h2>
+    <div id="profileInfo"></div>
+    <button onclick="goBack()" class="back-btn">⬅ Back to Dashboard</button>
+  </div>
+  <script>
+    const profile = JSON.parse(localStorage.getItem("sdgUser"));
+    const profileInfo = document.getElementById("profileInfo");
+
+    if (!profile || localStorage.getItem("sdgSession") !== "true") {
+      alert("Please login to view profile.");
+      window.location.href = "index.html";
+    }
+
+    profileInfo.innerHTML = `
+      <p><strong>Full Name:</strong> ${profile.fullName}</p>
+      <p><strong>School:</strong> ${profile.schoolName}</p>
+      <p><strong>Class/Grade:</strong> ${profile.classGrade}</p>
+      <p><strong>Age:</strong> ${profile.age}</p>
+      <p><strong>Gender:</strong> ${profile.gender}</p>
+      <p><strong>Email:</strong> ${profile.email || "N/A"}</p>
+      <p><strong>Username:</strong> ${profile.username}</p>
+    `;
+
+    function goBack() {
+      window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+</html>

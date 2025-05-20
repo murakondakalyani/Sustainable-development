@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/* Base body style — for all pages */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #e8f5e9); /* Bright gradient */
+    color: #000; /* Normal text color */
+  }
+  
+  /* Only for the home page */
+  .home-bg {
+    background-image: url('SUSTAINABLE.png');
+    background-size: 50%;
+    background-position: right;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: #fff;
+    position: relative;
+  }
+  
+  /* Dark overlay for home background ONLY */
+.home-bg::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+    z-index: -1;
+}
+
+
+/* Home Container */
+.home-container {
+  position: relative;
+  z-index: 1;
+  padding: 60px 40px;
+  max-width: 1000px;
+}
+
+/* Header Styling */
+.home-header {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.home-header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+.home-header p {
+  font-size: 1.3em;
+  color: #f1f1f1;
+  max-width: 600px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Intro Text */
+.home-intro {
+  max-width: 700px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+.intro-text {
+  font-size: 1.1em;
+  color: #f5f5f5;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 20px;
+}
+.btn {
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: background 0.3s ease;
+}
+.btn.primary {
+  background-color: #388e3c;
+}
+.btn.primary:hover {
+  background-color: #2e7d32;
+}
+.btn.secondary {
+  background-color: #00796b;
+}
+.btn.secondary:hover {
+  background-color: #00695c;
+}
+
+/* Auth Pages */
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.auth-container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.auth-container h2 {
+  margin-bottom: 20px;
+}
+.auth-container input,
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+.auth-container button {
+  background-color: #388e3c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.auth-container button:hover {
+  background-color: #2e7d32;
+}
+.auth-container p {
+  margin-top: 10px;
+}
+
+/* Dashboard */
+header {
+  background: linear-gradient(90deg, #00796b, #388e3c);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+.goal {
+  background: white;
+  border-left: 8px solid #00796b;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.goal:hover {
+  transform: scale(1.03);
+}
+.goal-page {
+  padding: 30px;
+}
+.goal-page video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.back-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #388e3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.back-btn:hover {
+  background-color: #2e7d32;
+}
+
+/* WhatsApp */
+.whatsapp-contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.profile-btn {
+    position: absolute;
+    top: 25px;
+    right: 120px;
+    padding: 10px 20px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .profile-btn:hover {
+    background-color: #115293;
+  }
+  
+
+/* Logout */
+.logout-btn {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.logout-btn:hover {
+  background-color: #b71c1c;
+}
